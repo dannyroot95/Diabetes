@@ -1,0 +1,1048 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Preguntas">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Cual es su edad?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupEdad"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_edad_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioEdad"
+                            android:text="Mas de 35 años"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_edad_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entre 10 - 34 años"
+                            android:fontFamily="@font/futura"
+                            android:onClick="checkRadioEdad"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="Complete los siguientes datos : "
+                        android:layout_height="wrap_content"/>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:text="Peso : "
+                          android:fontFamily="@font/futura"
+                          android:gravity="center"
+                          android:layout_height="match_parent"/>
+
+                      <EditText
+                          android:layout_width="wrap_content"
+                          android:layout_weight="1"
+                          android:id="@+id/edtPeso"
+                          android:fontFamily="@font/futura"
+                          android:inputType="number"
+                          android:layout_height="wrap_content"/>
+
+                  </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Altura :"
+                            android:fontFamily="@font/futura"
+                            android:gravity="center"
+                            android:layout_height="match_parent"/>
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/edtAltura"
+                            android:fontFamily="@font/futura"
+                            android:inputType="numberDecimal"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:text="Procesar"
+                        android:id="@+id/btnProcesar"
+                        android:fontFamily="@font/futura"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#fff"
+                        android:backgroundTint="@color/semired"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Resultado : "
+                            android:gravity="center"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/futura"
+                            android:id="@+id/txtResultado"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Cual es su medida de cintura?"
+                        android:layout_height="wrap_content"/>
+
+                   <RadioGroup
+                       android:layout_width="match_parent"
+                       android:id="@+id/radioGroupMedidas"
+                       android:layout_height="wrap_content">
+
+
+                       <RadioButton
+                           android:id="@+id/radio_cintura_1"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Menos de 80 cm"
+                           android:fontFamily="@font/futura"
+                           android:onClick="checkRadioMedida"
+                           android:checked="true"/>
+                       <RadioButton
+                           android:id="@+id/radio_cintura_2"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Entre 80 - 88 cm"
+                           android:fontFamily="@font/futura"
+                           android:onClick="checkRadioMedida"/>
+                       <RadioButton
+                           android:id="@+id/radio_cintura_3"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Más de 89 cm"
+                           android:fontFamily="@font/futura"
+                           android:onClick="checkRadioMedida"/>
+                   </RadioGroup>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            app:cardElevation="6dp"
+            android:clickable="true"
+            app:cardCornerRadius="12dp"
+            android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:fontFamily="@font/futura"
+                android:text="¿Tiene familia con antecedentes de diabetes?"
+                android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:id="@+id/radioGroupFamilia"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/radio_familia_antecedente_si"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Si"
+                    android:fontFamily="@font/futura"
+                    android:onClick="checkRadioFamilia"
+                    android:checked="true"/>
+                <RadioButton
+                    android:id="@+id/radio_familia_antecedente_no"
+                    android:layout_width="wrap_content"
+                    android:onClick="checkRadioFamilia"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:fontFamily="@font/futura"
+                    />
+            </RadioGroup>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Estubo expuesto a alta contaminación?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupContaminacion"
+                        android:layout_height="wrap_content">
+
+
+                        <RadioButton
+                            android:id="@+id/radio_contaminacion_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioContaminacion"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_contaminacion_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioContaminacion"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Vives en ambiente frio?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupAmbiente"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_ambiente_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioAmbiente"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_ambiente_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioAmbiente"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Tiene o tuvo el colesterol alto?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupColesterol"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_colesterol_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioColesterol"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_colesterol_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioColesterol"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Fumas en exceso?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupFumar"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_fumar_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioFumar"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_fumar_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioFumar"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Consumes azucar en exceso?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupAzucar"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_azucar_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioAzucar"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_azucar_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioAzucar"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Consumes alcohol en exceso?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupAlcohol"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_alcohol_si"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioAlcohol"
+                            android:text="Si"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_alcohol_no"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioAlcohol"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Consumes poca agua?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupAgua"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_agua_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioAgua"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_agua_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioAgua"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Tiene sed excesiva?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupSed"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_sed_si"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioSed"
+                            android:text="Si"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_sed_no"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioSed"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Tiene hambre excesiva?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupHambre"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_hambre_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioHambre"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_hambre_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioHambre"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Tuvo pérdida de peso inexplicable?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupPerdida"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_perdida_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioPerdida"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_perdida_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioPerdida"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Micción frecuente?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupMiccion"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_miccion_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioMiccion"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_miccion_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioMiccion"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Tiene los pies entumecidos?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupPies"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_pies_si"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioPies"
+                            android:text="Si"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_pies_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioPies"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Tiene alguna área de piel oscura?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupPiel"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_piel_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioPiel"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_piel_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioPiel"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="¿Sus heridas demoran en cicatrizar?"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupHerida"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_heridas_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioHeridas"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_heridas_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioHeridas"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="¿Está embarazada?"
+                        android:fontFamily="@font/futura"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupEmbarazo"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_embarazo_si"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioEmbarazo"
+                            android:text="Si"
+                            android:fontFamily="@font/futura"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_embarazo_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioEmbarazo"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura"
+                            android:text="No"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                app:cardElevation="6dp"
+                android:clickable="true"
+                app:cardCornerRadius="12dp"
+                android:layout_margin="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/futura"
+                        android:text="Indique el nivel de azucar"
+                        android:layout_height="wrap_content"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:id="@+id/radioGroupANivel"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radio_nivel_si"
+                            android:fontFamily="@font/futura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="checkRadioNivel"
+                            android:text="Mayor a 126 mg/dl"
+                            android:checked="true"/>
+                        <RadioButton
+                            android:id="@+id/radio_nivel_media"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioNivel"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="Entre 101-125 mg/dl"/>
+                        <RadioButton
+                            android:id="@+id/radio_nivel_no"
+                            android:layout_width="wrap_content"
+                            android:onClick="checkRadioNivel"
+                            android:fontFamily="@font/futura"
+                            android:layout_height="wrap_content"
+                            android:text="Entre 80-100 mg/dl"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="match_parent"
+                android:text="Procesar"
+                android:textColor="#fff"
+                android:backgroundTint="@color/semired"
+                android:id="@+id/button_apply"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

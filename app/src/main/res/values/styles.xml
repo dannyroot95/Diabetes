@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ThemePrimary" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#fa1744</item>
+        <item name="colorPrimaryDark">#fa1744</item>
+        <item name="colorAccent">#fa1744</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#fa1744</item>
+        <item name="colorPrimaryDark">#fa1744</item>
+        <item name="colorAccent">#fa1744</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="toolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="titleTextColor">#ffffff</item>
+    </style>
+
+    <style name="splashScreenTheme" parent="@style/AppThemeSplash">
+        <item name="android:windowBackground">@drawable/splashscreen</item>
+        <item name="colorPrimary">#fa1744</item>
+        <item name="colorPrimaryDark">#fa1744</item>
+    </style>
+
+    <style name="AppThemeSplash" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="ThemeOverlay" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorPrimary">#000</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">#000</item>
+        <item name="fontFamily">@font/futura</item>
+    </style>
+
+    <style name="DialogHistoria" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#fa1744</item>
+    </style>
+
+
+</resources>
